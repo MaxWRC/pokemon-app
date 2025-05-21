@@ -6,12 +6,6 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/MaxWRC/pokemon-app.git'
-            }
-        }
-
         stage('Build') {
             steps {
                 sh 'docker build -t $IMAGE_NAME .'
@@ -46,3 +40,4 @@ pipeline {
         }
     }
 }
+
